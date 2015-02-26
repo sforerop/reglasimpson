@@ -37,9 +37,9 @@ public class Main extends HttpServlet {
         String numSegvar = req.getParameter("numSegvar");
         String dofvar = req.getParameter("dofvar");
         App app = new App();        
-        app.calcularVariables(Double.parseDouble(xvar),Double.parseDouble(numSegvar),Double.parseDouble(dofvar));
+        App.calcularVariables(Double.parseDouble(xvar),Double.parseDouble(numSegvar),Double.parseDouble(dofvar));
         PrintWriter out = resp.getWriter();
-        out.print("P =" + app.getP() +"\n");
+        out.print("P =" + App.getP() +"\n");
         
         
     }
