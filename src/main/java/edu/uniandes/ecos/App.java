@@ -13,10 +13,10 @@ public class App {
     private static Double numSeg;
     private static Double P;
 
-    public static void main(String[] args) {
-        calcularVariables(1.1,10.0,9.0);
-        calcularP();
-    }
+//    public static void main(String[] args) {
+//        calcularVariables(1.1,10.0,9.0);
+//        calcularP();
+//    }
 
     public static void calcularVariables(Double xvar, Double numSegvar, Double dofvar) {
         x = xvar;

@@ -47,7 +47,7 @@ public class Main extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        if(req.getParameter("elementos") != null){
+        if(req.getParameter("xvar") != null){
             showHome(req, resp);
         }else{
         PrintWriter out = resp.getWriter();
