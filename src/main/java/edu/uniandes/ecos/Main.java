@@ -38,6 +38,7 @@ public class Main extends HttpServlet {
         String dofvar = req.getParameter("dofvar");
         App app = new App();        
         App.calcularVariables(Double.parseDouble(xvar),Double.parseDouble(numSegvar),Double.parseDouble(dofvar));
+        App.calcularP();
         PrintWriter out = resp.getWriter();
         out.print("P =" + App.getP() +"\n");
         
