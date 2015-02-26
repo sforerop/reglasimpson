@@ -18,6 +18,11 @@ public class Main extends HttpServlet {
 
     public static String texto = "";
 
+    /**
+     * Metodo que inicia el servlet
+     * @param args
+     * @throws Exception 
+     */
     public static void main(String[] args) throws Exception {
         Server server = new Server(Integer.valueOf(System.getenv("PORT")));
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
@@ -28,6 +33,14 @@ public class Main extends HttpServlet {
         server.join();
     }
     
+    /**
+     * Metodo post que se ejecuta cuando hay un submit
+     * obtiene los valores digitados en pantalla y llama los metodos que calculan la regla de Simpson
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException 
+     */
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
@@ -45,6 +58,14 @@ public class Main extends HttpServlet {
         
     }
     
+    /**
+     * Metodo que carga la pantalla en html que pedira los datos a ingresar 
+     * para realizar el calculo de la regla de Simpson
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException 
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
